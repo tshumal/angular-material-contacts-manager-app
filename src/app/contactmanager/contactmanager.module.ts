@@ -9,6 +9,8 @@ import { FlexLayoutModule } from '@angular/flex-layout';
 import {MaterialModule} from '../shared/material.module';
 import {FormsModule} from '@angular/forms';
 import { ContactmanagerAppComponent } from './contactmanager-app.component';
+import {UserService} from './services/user.service';
+import {HttpClientModule} from '@angular/common/http';
 
 
 @NgModule({
@@ -18,7 +20,11 @@ import { ContactmanagerAppComponent } from './contactmanager-app.component';
     ContactmanagerRoutingModule,
     MaterialModule,
     FlexLayoutModule,
-    FormsModule
+    FormsModule,
+    HttpClientModule
+  ],
+  providers: [
+    UserService
   ]
 })
 export class ContactmanagerModule { }
